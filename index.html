@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/index.css">
+    <title>Home</title>
+</head>
+<body>
+<div class="container-1"> 
+        <h2>Challenge 1: Your age in days</h2>
+
+    <div class="flex-box-container-1">
+        <div>
+            <button class="btn btn-primary" onclick="ageInDays()">Click me</button>
+        </div>
+        <div>
+            <button class="btn btn-danger" onclick="reset()">Reset</button>
+        </div>
+    </div>
+    <div class="flex-box-container-1">
+        <div id="flex-box-result" ></div>
+    </div>
+
+</div>
+<div class="container-2">
+    <h2>Challenge 2: Cat Generator</h2> 
+    <button class="btn btn-success" onclick="catgenerate()">Generate Cat</button>
+    <div class="flex-box-container-2" id='flex-box-cat'>
+        <!-- <img src="http://thecatapi.com/api/images/get?format=src&type=gif&size=small" alt=""> -->
+    </div>
+</div>
+<div class="container-3">
+    <h2>Challenge 3: Rock Paper Scissors</h2>
+    <div class='flex-box-container-3' id="flex-box-container-3-div">
+        <img src="static/images/rock.jpg" alt="rock" id="rock" onclick="rpsGame(this)">
+        <img src="static/images/paper.jpg" alt="paper" id="paper" onclick="rpsGame(this)">
+        <img src="static/images/scissors.jpg" alt="scissors" id="scissors" onclick="rpsGame(this)">
+    </div>
+</div>
+<div class='container-4'>
+    <h2 id='color-box-h2'>Challenge 4: Choose button color</h2>
+    <div class='flex-box-container-4'>
+        <form action="">
+            <select name="selector" id="selector-background" onchange=buttonChangeColor(this)>
+                <option value="random">Random</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="reset">Reset</option>
+            </select>
+        </form>
+        <button class='btn btn-primary'>Twitter</button>
+        <button class='btn btn-danger'>Instagram</button>
+        <button class='btn btn-warning'>Google</button>
+        <button class='btn btn-success'>Facebook</button>
+    </div>
+</div>
+<div class='container-5'>
+    <h2>Challenge 6: BlackJack</h2>
+    <h3 id="result-message">Let's Play</h3>
+    <div class='flex-blackjack-row-1'>
+        <div id='yourscore'>
+            <h3>You: <span id='your-result'>0</span></h3>
+        </div>
+        <div id='botscore'>
+            <h3>Dealer: <span id='bot-result'>0</span></h3>
+        </div>
+    </div>
+    <div class='flex-blackjack-row-2'>
+        <div>
+            <button class='btn-lg btn-primary mr-2' id='blackjack-hit-button'>Hit</button>
+            <button class='btn-lg btn-warning mr-2' id='blackjack-stand-button'>Stand</button>
+            <button class='btn-lg btn-danger' id='blackjack-deal-button'>Deal</button>
+        </div>
+    </div>
+    <div class='flex-blackjack-row-3'>
+        <table>
+            <tr>
+                <th>Wins</th>
+                <th>Loses</th>
+                <th>Draws</th>
+            </tr>
+            <tr>
+                <td><span id='wins'>0</span></td>
+                <td><span id='loses'>0</span></td>
+                <td><span id='draws'>0</span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="static/js/index.js"></script>
+</body>
+</html>
